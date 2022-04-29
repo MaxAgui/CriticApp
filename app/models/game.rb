@@ -13,4 +13,6 @@ class Game < ApplicationRecord
   belongs_to :parent, class_name: "Game", optional: true
 
   has_many :critics, as: :criticable, dependent: :destroy
+
+  enum category: { main_game: 0, expansion: 1}
 end
