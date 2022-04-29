@@ -3,5 +3,5 @@ class Critic < ApplicationRecord
   belongs_to :criticable, polymorphic: true
 
   validates :body, presence: true
-  validates :title, presence: true, length: { maximun: 40 }
+  # validates :title, presence: true, length: { maximun: 40 }
 end
