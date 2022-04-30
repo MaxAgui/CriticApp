@@ -1,0 +1,12 @@
+<div id="<%= dom_id game %>">
+    <p>
+      <%= link_to game.name, game %>
+    </p>
+  <p><%= game.release_date.year %></p>
+  <p><%= game.summary %></p>
+  <p><%= game.rating %></p>
+  <p><%= game.critics.count %> Critics</p>
+  <p>
+      <%= link_to 'Edit', edit_game_path(game) %>
+    </p>
+</div>
