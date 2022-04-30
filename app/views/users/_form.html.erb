@@ -1,31 +1,45 @@
-<%= form_with(model: user, url: "/new_user", method: :post) do |form| %>
-  <% if user.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+ <section class="section-md ">
+    <div class="container-lg py-2">
+      <div class="container-md">
+        <%= form_with(model: user, url: "/new_user", method: :post, class: "flex flex-column gap-4") do |form| %>
+          <% if user.errors.any? %>
+            <div style="color: red">
+              <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-      <ul>
-        <% user.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+              <ul>
+                <% user.errors.each do |error| %>
+                  <li><%= error.full_message %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+          <div class="flex gap-4 mb-2">
+            <%= form.label :username, "Username:", class:"content-xs overline" %>
+            <div class="input__container">
+              <%= form.text_field :username, class: "input__content" %>
+            </div> 
+          </div>
+          <div class="flex gap-4 mb-2">
+            <%= form.label :email, "Email:" %>
+            <div class="input__container">
+            <%= form.text_field :email %>
+            </div>
+          </div>
+          <div class="flex gap-4 mb-2">
+            <%= form.label :password, "Password:" %>
+            <div class="input__container">
+            <%= form.text_field :password %>
+            </div>
+          </div>
+          <div class="flex gap-4 mb-2">
+            <%= form.label :password_confirmation, "Pasword Confirmation:" %>
+            <div class="input__container">
+            <%= form.text_field :password_confirmation %>
+            </div>
+          </div>
+            <%= form.submit "SIGN UP", class: "button button--primary fit-content"%>
+          </div>
         <% end %>
-      </ul>
     </div>
-  <% end %>
-  <div>
-    <%= form.label :username, "Username:" %>
-    <%= form.text_field :username %>
   </div>
-  <div>
-    <%= form.label :email, "Email:" %>
-    <%= form.text_field :email %>
-  </div>
-  <div>
-    <%= form.label :password, "Password:" %>
-    <%= form.text_field :password %>
-  </div>
-  <div>
-    <%= form.label :password_confirmation, "Pasword Confirmation:" %>
-    <%= form.text_field :password_confirmation %>
-  </div>
-    <%= form.submit "SIGN UP"%>
-  </div>
-<% end %>
+</section>
