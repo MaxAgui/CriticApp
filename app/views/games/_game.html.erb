@@ -1,7 +1,10 @@
 <div id="<%= dom_id game %>">
-    <p>
-      <%= link_to game.name, game %>
-    </p>
+  <% if game.cover.attached? %>
+        <div>
+          <%= image_tag game.cover %>
+        </div>
+  <% end %>
+  <p><%= link_to game.name, game %></p>
   <p><%= game.release_date.year %></p>
   <p><%= game.summary %></p>
   <p><%= game.rating %></p>

@@ -12,6 +12,11 @@
   <% end %>
 
   <div>
+    <%= form.label :cover %><br>
+    <%= form.file_field :cover, accept: "image/png, image/jpeg" %>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>
