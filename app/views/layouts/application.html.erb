@@ -11,8 +11,34 @@
   </head>
 
   <body>
-  <header>
-  <h2>Critics</h2>
+  <header class="header">
+    <nav class="navbar">
+      <%= link_to image_tag("logo.png"), games_path%>
+      <input
+        id="abrir-cerrar"
+        name="abrir-cerrar"
+        type="checkbox"
+        value=""
+      />
+      <label for="abrir-cerrar" class="toggle-button">
+        <span class="cerrar" title="Cerrar">Cerrar</span>
+        <span class="abrir" title="Abrir">Abrir</span>
+      </label>
+      <ul class="expandable navbar--links list-style-none">
+        <li>
+          <%= link_to "Edit profile", games_path, class: "link text-sm"%>
+        </li>
+        <li>
+          <%= link_to "Games", games_path, class: "link text-sm"%>
+        </li>
+        <li>
+          <%= link_to "Companies", games_path, class: "link text-sm"%>
+        </li>
+        <li>
+          <%= link_to "<button class='button button--primary button--sm text-decoration-none button__animation'>Log out</button>".html_safe, games_path, class: "link text-sm"%>
+        </li>
+      </ul>
+    </nav>
   </header>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
