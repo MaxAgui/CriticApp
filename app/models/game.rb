@@ -13,8 +13,9 @@ class Game < ApplicationRecord
   belongs_to :parent, class_name: "Game", optional: true
 
   has_many :critics, as: :criticable, dependent: :destroy
+  has_one_attached :cover
 
-  enum category: { main_game: 0, expansion: 1}
+  enum category: { main_game: 0, expansion: 1 }
 
   validates :category, presence: true
   validates :name, uniqueness: true, presence: true
