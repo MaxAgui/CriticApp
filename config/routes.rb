@@ -1,16 +1,31 @@
 Rails.application.routes.draw do
-  resources :companies
-  root "users#index"
+  resources :involved_companies
+  root "games#index"
+  resources :genres
+  resources :games do
+    # resources :critics
 
-  devise_for :users 
+    # /games/:id/add_genre
+    post "add_genre", on: :member
+    # /games/:id/remove_genre
+    delete "remove_genre", on: :member
+
+    # /games/:id/add_platform
+    post "add_platform", on: :member
+    # /games/:id/remove_platform
+    delete "remove_platform", on: :member
+  end
+
+  resources :companies
+
+  devise_for :users
   post "/new_user", to: "users#create"
   get "/new_user", to: "users#new"
   # get "/new_user", to: "users#create"
   # resources :users, only: %i[new, show]
-   resources :users
-  
+  resources :users
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-
 end
