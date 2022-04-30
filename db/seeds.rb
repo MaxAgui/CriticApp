@@ -47,7 +47,7 @@ tomb = Game.create(name: "Shadow of the Tomb Raider",
                  release_date: "14-09-2018",
                  rating: 86.5
                 )
-border.genres.push(gen1)
-border.genres.push(gen2)
-border.genres.push(gen5)
-border.genres.push(gen6)
+tomb.genres.push(gen1)
+tomb.genres.push(gen2)
+tomb.genres.push(gen5)
+tomb.genres.push(gen6)
