@@ -1,0 +1,64 @@
+.w-full {
+  width: 100%;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.semibold {
+  font-weight: 600;
+}
+
+.overline {
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+}
+
+.mono {
+  font-family: "Anonymous Pro", monospace;
+}
+
+.list-style-none {
+  list-style-type: none;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}
+
+.text-white {
+  color: var(--white)
+}
+
+.pink-600 {
+  color: var(--pink-600);
+}
+
+.gray-300 {
+  color: var(--gray-300)
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.my-0\.5 {
+  margin: 0.5rem 0;
+}
+
+.py-0\.5 {
+  padding: 0.5rem 0;
+}
+
+.py-3 {
+  padding: 3rem 0;
+}
+
+.center {
+  text-align: center;
+}
