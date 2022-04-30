@@ -1,6 +1,6 @@
 <h2>Log in</h2>
 <h2>Continue with:</h2>
-
+<%= link_to "Login with github", github_login_path, data: {turbo_method: :post}%>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
