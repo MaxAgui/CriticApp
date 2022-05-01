@@ -1,16 +1,17 @@
 <p style="color: green"><%= notice %></p>
 
-<div>
-  <h1>Games</h1>
-</div>
+<section class="index">
+  <div class="index--title">
+    <h1>Games</h1>
+  </div>
 
-<div>
-  <%= link_to "<button>New Game</button>".html_safe, new_game_path %>
-</div>
+  <div class="index--button">
+    <%= link_to "<button class='button button--index button--sm text-decoration-none button__animation'>New Game</button>".html_safe, new_game_path %>
+  </div>
 
-<div id="games">
-  <% @games.each do |game| %>
-    <%= render game %>
-  <% end %>
-</div>
-
+  <div id="games">
+    <% @games.each do |game| %>
+      <%= render game %>
+    <% end %>
+  </div>
+</section>

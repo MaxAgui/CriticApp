@@ -9,6 +9,10 @@
   color: var(--gray-900);
 }
 
+.logo{
+  padding: 0.5rem 0;
+}
+
 .navbar {
   display: flex;
   justify-content: space-around;
