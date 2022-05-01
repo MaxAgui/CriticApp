@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   devise_for :users
   post "/new_user", to: "users#create"
   get "/new_user", to: "users#new"
-  resources :users
+  get '/auth/github/callback', to: 'sessions#create'
+  resources :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+  #resources :users
 
 end
