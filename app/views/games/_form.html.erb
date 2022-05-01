@@ -27,6 +27,11 @@
   </div>
 
   <div>
+    <%= form.label :rating %><br>
+    <%= form.number_field :rating, step: 0.1, class: "input__content" %>
+  </div>
+
+  <div>
     <%= form.label :category, style: "display: block" %>
     <%= form.select :category, Game.categories.keys, { prompt: true }, { class: "select__input" } %>
   </div>

@@ -13,7 +13,7 @@
   <body>
   <header class="header">
     <nav class="navbar">
-      <%= link_to image_tag("logo.png"), games_path%>
+      <%= link_to image_tag("logo.png"), games_path, class: "logo" %>
       <input
         id="abrir-cerrar"
         name="abrir-cerrar"
@@ -35,7 +35,7 @@
           <%= link_to "Companies", games_path, class: "link text-sm"%>
         </li>
         <li>
-          <%= link_to "<button class='button button--primary button--sm text-decoration-none button__animation'>Log out</button>".html_safe, games_path, class: "link text-sm"%>
+          <%= link_to "<button class='button button--primary button--sm text-decoration-none button__animation'>Log out</button>".html_safe, games_path%>
         </li>
       </ul>
     </nav>
