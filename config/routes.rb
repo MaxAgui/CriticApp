@@ -16,7 +16,9 @@ Rails.application.routes.draw do
     delete "remove_platform", on: :member
   end
 
-  resources :companies
+  resources :companies do
+    resources :critics
+  end
 
   devise_for :users
   post "/new_user", to: "users#create"
