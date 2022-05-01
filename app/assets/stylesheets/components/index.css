@@ -1,11 +1,11 @@
 #games{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   gap: 1rem;
 }
 
 .index{
+  height: calc(100vh - 295px);
   padding: 1rem;
   background-color: var(--gray-100);
 }
