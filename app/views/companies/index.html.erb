@@ -1,30 +1,15 @@
-<section class="section">
-  <div class="container">
-    <h1 class="heading">Companies</h1>
-    <%= link_to 'New company', new_company_path, class: "button button--primary fit-content" %>
+<section class="index">
+  <div class="index--title">
+    <h1>Companies</h1>
+  </div>
 
-    <div class="table-container">
-    <table>
-      <thead>
-        <tr>
-          <th scope="col">name</th>
-          <th scope="col">Games count</th>
-          <th scope="colgroup" colspan="3">Actions</th>
-        </tr>
-      </thead>
+  <div class="index--button">
+    <%= link_to "<button class='button button--index button--sm text-decoration-none button__animation'>New Game</button>".html_safe, new_game_path %>
+  </div>
 
-      <tbody>
-        <% @companies.each do |company| %>
-          <tr>
-            <td><%= company.name %></td>
-            <td><%= company.games_count %></td>
-            <td><%= link_to 'Show', company %></td>
-            <td><%= link_to 'Edit', edit_company_path(company) %></td>
-            <td><%= link_to 'Destroy', company, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-    </div>
+  <div id="companies">
+    <% @companies.each do |company| %>
+      <%= render company %>
+    <% end %>
   </div>
 </section>

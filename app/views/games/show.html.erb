@@ -96,7 +96,7 @@
 
       <div>
         <%= link_to 'Add a developer', new_involved_company_path(developer: true, publisher: false) %></li>
-         <%= form_with(url: new_involved_company_path(@game)) do |form| %>
+         <%= form_with(url: new_involved_company_path) do |form| %>
               <div>
                 <div>
                   <%= form.collection_select :company_id, (Platform.all - @game.platforms), :id, :name, { prompt: true }, { class: "select__input" } %>
