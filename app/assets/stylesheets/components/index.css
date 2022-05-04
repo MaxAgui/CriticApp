@@ -1,13 +1,12 @@
 #games{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 1rem;
 }
 
 .index{
   padding: 1rem;
   background-color: var(--gray-100);
-  overflow:auto;
 }
 
 .index--button{
