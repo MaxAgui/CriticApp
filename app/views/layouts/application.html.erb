@@ -25,18 +25,26 @@
         <span class="abrir" title="Abrir">Abrir</span>
       </label>
       <ul class="expandable navbar--links list-style-none">
-        <li>
-          <%= link_to "Edit profile", games_path, class: "link text-sm"%>
-        </li>
+        <% if user_signed_in? %>
+          <li>
+            <%= link_to "Edit profile", games_path, class: "link text-sm"%>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to "Log in", games_path, class: "link text-sm"%>
+          </li>
+        <% end %>
         <li>
           <%= link_to "Games", games_path, class: "link text-sm"%>
         </li>
         <li>
           <%= link_to "Companies", games_path, class: "link text-sm"%>
         </li>
-        <li>
-          <%= link_to "<button class='button button--primary button--sm text-decoration-none button__animation'>Log out</button>".html_safe, games_path%>
-        </li>
+        <% if user_signed_in? %>
+          <li>
+            <%= link_to "<button class='button button--primary button--sm text-decoration-none button__animation'>Log out</button>".html_safe, destroy_user_session_path, data: { turbo_method: :delete } %>
+          </li>
+        <% end %>
       </ul>
     </nav>
   </header>

@@ -5,9 +5,9 @@
 }
 
 .index{
-  height: calc(100vh - 295px);
   padding: 1rem;
   background-color: var(--gray-100);
+  overflow:auto;
 }
 
 .index--button{
@@ -58,6 +58,10 @@
 
 .game_card__body{
   margin: 0.625rem 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .game_card__footer{

@@ -18,6 +18,6 @@ class SessionController < ApplicationController
   # DELETE /sessions
   def destroy
     logout
-    redirect_to root_path, status: :see_other
+    redirect_to user_session_path, status: :see_other
   end
 end

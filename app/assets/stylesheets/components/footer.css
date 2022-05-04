@@ -1,5 +1,10 @@
 .footer {
   background-color: var(--stone-100);
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  margin: 0;
 }
 
 .footer__content {
@@ -8,7 +13,7 @@
   align-items: center;
   gap: 0.625rem;
   text-align: center;
-  padding: 48px 0;
+  padding: 1rem 0;
 }
 
 .card__container{
